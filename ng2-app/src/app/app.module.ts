@@ -1,3 +1,4 @@
+import { AddEmployeeComponent } from './components/addemployee.component';
 import { FilterPipe } from './pipes/pipe.filter';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -14,6 +15,7 @@ import { routing } from './app.routing';
   declarations: [
     AppComponent,
     AboutComponent,
+    AddEmployeeComponent,
     FilterPipe
   ],
   imports: [
