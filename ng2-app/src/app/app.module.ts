@@ -1,3 +1,4 @@
+import { FilterPipe } from './pipes/pipe.filter';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -8,10 +9,12 @@ import { AboutComponent } from './components/about.component';
 
 import { routing } from './app.routing';
 
+
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent
+    AboutComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
