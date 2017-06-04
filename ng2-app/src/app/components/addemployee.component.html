@@ -1,0 +1,64 @@
+<div class="container">
+
+  <div class="page-header">
+    <h1>Add Employee</h1>
+  </div>
+
+  <form novalidate [formGroup]="addEmployeeForm" (ngSubmit)="onsubmit()">
+
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name" formControlName="empname">
+      <div *ngIf="empnamecontrol.errors">
+        <div class="alert alert-danger" *ngIf="empnamecontrol.errors.required && (empnamecontrol.touched || empnamecontrol.dirty)">
+          <strong>Required!</strong> This field can not be empty
+       </div>
+      </div>  
+    </div>
+
+    <div class="form-group">
+      <label for="name">Gender:</label><br>
+      <label class="radio-inline"><input type="radio" formControlName="gender" id="male" value="male">Male</label>
+      <label class="radio-inline"><input type="radio" formControlName="gender" id="female" value="female">Female</label>
+    </div>
+
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="text" class="form-control" id="email" placeholder="Enter email" name="email" formControlName="email">
+    </div>
+
+    <div class="form-group">
+      <label for="graduation">Graduation:</label>
+      <select name="" id="graduation" class="form-control" formControlName="graduation">
+            <option value="B.COM">B.COM</option>
+            <option value="B.SC">B.SC</option>
+            <option value="B.E">B.E</option>
+        </select>
+    </div>
+
+
+    <div class="form-group" formGroupName="hobbies">
+      <label for="hobbies">Hobbies:</label> <br>
+
+      <label class="checkbox-inline"><input type="checkbox" value="Gaming" formControlName="gaming" id="gaming">Gaming</label>
+      <label class="checkbox-inline"><input type="checkbox" value="Swimming" formControlName="swimming" id="swimming">Swimming</label>
+      <label class="checkbox-inline"><input type="checkbox" value="Music" formControlName="music" id="music">Music</label>
+    </div>
+
+    <div class="form-group">
+      <label for="other">Other:</label> <br>
+      <textarea name="" id="other" class="form-control" rows="3" formControlName="other"></textarea>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary" [disabled]="!addEmployeeForm.valid">Submit</button>
+
+    <input type="reset" value="Reset" class="btn btn-default">
+
+
+
+  </form>
+
+
+</div>
