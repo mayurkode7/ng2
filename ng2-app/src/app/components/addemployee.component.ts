@@ -48,7 +48,7 @@ export class AddEmployeeComponent implements OnInit{
     }
 
     onsubmit(){
-        console.info(this.addEmployeeForm.value);
+        console.table(this.addEmployeeForm.value);
     }
     onreset(){
         this.addEmployeeForm.reset();
