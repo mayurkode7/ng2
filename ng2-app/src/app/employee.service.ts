@@ -18,7 +18,7 @@ export class EmployeeService {
     
     public getEmployees() : any{
 
-        return this._http.get('http://mayurkode7.github.io/api/users.json')
+        return this._http.get('http://mayurkode7.github.io/api/user.json')
                     .map((respone: Response) => respone.json())
                     .catch(this.empError);
     
