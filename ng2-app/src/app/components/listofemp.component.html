@@ -7,7 +7,7 @@
 </div>
   
   
-  
+  <div *ngIf="errMsg">{{ errMsg }}</div>
   
   <ul class="list-group">
     <li class="list-group-item" *ngFor="let item of employees"> {{ item.name | filter: query}}</li>
