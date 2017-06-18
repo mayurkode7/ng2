@@ -1,0 +1,18 @@
+
+<div class="container">
+
+  
+<div class="page-header">
+  <h1>Employees <small></small></h1>
+</div>
+  
+  
+  
+  
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let item of employees"> {{ item.name | filter: query}}</li>
+  </ul>
+  
+
+</div>
+

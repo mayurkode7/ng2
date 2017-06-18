@@ -7,6 +7,9 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './components/about.component';
+import { ListOfEmployeeComponent } from './components/listofemp.component';
+
+import { EmployeeService } from './employee.service';
 
 import { routing } from './app.routing';
 
@@ -16,7 +19,8 @@ import { routing } from './app.routing';
     AppComponent,
     AboutComponent,
     AddEmployeeComponent,
-    FilterPipe
+    FilterPipe,
+    ListOfEmployeeComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +29,7 @@ import { routing } from './app.routing';
     ReactiveFormsModule,
     routing
   ],
-  providers: [],
+  providers: [ EmployeeService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
